@@ -1,7 +1,7 @@
 // The info card that opens when you click a person or a string.
-import { CONFIG } from './config.js?v=1794564273';
-import { ME, esc, CLOSENESS_WORDS, RING_NAMES, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794564273';
-import { symbolFile } from './lib.js?v=1794564273';
+import { CONFIG } from './config.js?v=1794564470';
+import { ME, esc, CLOSENESS_WORDS, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794564470';
+import { symbolFile } from './lib.js?v=1794564470';
 
 const panel = document.getElementById('panel');
 const body = document.getElementById('panel-body');
@@ -107,7 +107,6 @@ function orbitDiagram(p) {
 }
 
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
-const fact = (label, value, aside = '') => (value ? `<div><dt>${label}</dt><dd>${value}${aside ? `<small>${aside}</small>` : ''}</dd></div>` : '');
 
 // A tie: their symbol in a small ring, or their name as a plain tag if they have no symbol.
 function tie(t) {
@@ -121,7 +120,6 @@ function personCard(p) { open(personHTML(p), p); }
 // running off the edge, then their words, then one plain line about where things stand.
 const stamp = (n, color) => `<div class="card-stamp" style="--c:${color}">${symbolFile(n.isMe ? ME : n.name) ? who(n, 'sym-stamp') : `<span class="card-name">${esc(n.name)}</span>`}</div>`;
 const orbitBack = p => `<div class="card-orbit" aria-hidden="true">${orbitDiagram(p)}</div>`;
-const line = parts => `<p class="card-line">${parts.filter(Boolean).join(' ')}</p>`;
 const STATUS_LINE = { steady: '', fading: 'Fading.', faded: 'Faded.', 'ended badly': 'Cut.' };
 const wash = color => `<div class="card-wash" style="--c:${color}" aria-hidden="true"></div>`;
 
@@ -158,18 +156,10 @@ function linkCard(l) {
   `, l);
 }
 
+// Zara's own card: just her symbol, large, in gold foil-gold.
 function meCard() {
   const me = data.nodes[0];
-  const count = fn => data.nodes.filter(n => !n.isMe && fn(n)).length;
-  open(`
-    ${stamp(me, LOOK_GOLD)}
-    <dl class="facts">
-      ${[1, 2, 3, 4, 5].map(i => fact(cap(RING_NAMES[i]), String(count(p => p.layer_now === i)))).join('')}
-      ${fact('Grown apart', String(count(p => p.layer_peak < p.layer_now)))}
-      ${fact('Cut', String(count(p => p.status === 'ended badly')))}
-    </dl>
-    ${line([`${data.nodes.length - 1} people.`])}
-  `, me);
+  open(`<div class="me-card">${stamp(me, LOOK_GOLD)}</div>`, me);
 }
 const LOOK_GOLD = '#d9a93a';
 

@@ -1,7 +1,7 @@
 // How the web looks: layout, line texture and palette. Every value here can be pulled
 // around live in the tuner (press T, or open the page with ?tune). "Copy settings" in the
 // tuner gives you a block to paste into config.js → look, which makes it the default.
-import { CONFIG } from './config.js?v=1794564273';
+import { CONFIG } from './config.js?v=1794564470';
 
 // Line textures: how each string is drawn.
 //   twist     how tightly the strands wind around each other (0 = straight, parallel strands)

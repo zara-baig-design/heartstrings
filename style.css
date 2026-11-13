@@ -714,3 +714,24 @@ body.deck-open #top, body.deck-open #dock, body.deck-open #panel, body.deck-open
   #panel > .close { top: 6px; right: 6px; position: absolute; }
   #deck > .close { top: calc(10px + env(safe-area-inset-top)); right: 12px; position: absolute; }
 }
+
+/* Zara's card: only her symbol, big */
+.me-card { display: grid; place-items: center; padding: 24px 0 18px; }
+.me-card .card-stamp { margin: 0; }
+.me-card .sym-stamp { width: 180px; height: 180px; transform: rotate(-4deg); }
+@media (max-width: 700px) { .me-card .sym-stamp { width: 150px; height: 150px; } }
+@media (max-width: 700px), (pointer: coarse) { #panel > .close { background: color-mix(in srgb, var(--paper) 85%, transparent); border-radius: 50%; } }   /* the × stays readable over the orbit drawing */
+
+/* desktop: a QR code in the corner so visitors can carry the piece away on their phones */
+#qr { display: none; }
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  #qr {
+    position: fixed; right: 26px; bottom: 26px; z-index: 60; display: flex; align-items: flex-end; gap: 12px;
+    padding: 10px; border-radius: 6px; background: color-mix(in srgb, var(--paper) 86%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent); box-shadow: none;
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  }
+  #qr img { display: block; width: 84px; height: 84px; }
+  #qr p { margin: 0 4px 2px 0; font: 400 8.5px/1.6 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  body.panel-open #qr, body.deck-open #qr { display: none; }
+}
