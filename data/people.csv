@@ -1,0 +1,145 @@
+name,Physical Installation?,group,closeness_now,closeness_at_peak,how_often_we_talk,miles_away,year_met,status,connected_to,artifact_quote,note
+P01,TRUE,college,inner circle,inner circle,every day,1000,2023,close,"P02 (close)
+P25 (friends, faded)
+P04 (close)
+P06 (acquaintances)
+P03 (friends)
+P07 (close, ended badly)
+P09 (friends, ended badly)
+P08 (close, ended badly)
+P05 (friends, faded)
+P10 (acquaintances)
+P11 (acquaintances)
+P12 (acquaintances)
+P22 (acquaintances)",,"You're my safe haven in a world of chaos, my comfort and my happiness. We started out as near strangers, and slowly you realized there was a lot more to me than you first thought. I'm so grateful for who we've become."
+P02,TRUE,college,close friend,inner circle,once in a while,1000,2023,close,"P01 (close)
+P03 (friends)
+P04 (friends)
+P05 (friends, faded)",,"You're like a big brother, and you were a huge part of my first two years at school. We don't talk often anymore, but I know you'll always be there for me."
+P03,TRUE,college,close friend,inner circle,once in a while,100,2023,close,"P01 (close)
+P04 (friends)
+P05 (friends, faded)
+P07 (friends, faded)",ok but what if we just did it,"After a rough roommate situation freshman year, I spent my last few months of school living on your couch. It gave me a best friend for life and a big sister. With you, I never have to explain myself."
+P04,FALSE,college,good friend,good friend,once in a while,100,2023,steady,"P01 (close)
+P07 (close, ended badly)",,"I never quite knew if you actually liked me. You made everything lighthearted and fun, and the longer we're apart, the more I miss that piece of us."
+P05,TRUE,college,friendly,inner circle,every week,0,2023,faded,"P08 (close)
+P09 (close)
+P07 (friends)
+P22 (friends)",,"You were my closest friend for my first two years at school, until we grew apart and had a falling out that still hurts. When it mattered, your silence felt like choosing a side, and it wasn't mine. We've mended things a little, and I'll always have a soft spot for you, but it can't go back to how it was."
+P06,TRUE,college,good friend,close friend,every week,0,2025,steady,"P08 (friends)
+P09 (friends)
+P07 (friends)
+P01 (friends)
+P10 (friends)
+P11 (friends)
+P12 (friends)
+P05 (friends)
+P04 (acquaintances)",,"You're hard to read, but I know you care. Slowly but surely I've cracked your shell, and I'm so glad I did."
+P07,TRUE,college,friendly,inner circle,once in a while,10000,2023,fading,"P08 (close)
+P05 (friends)
+P09 (close)
+P06 (friends)
+P01 (close, ended badly)
+P04 (close, ended badly)
+P03 (friends, faded)",,"You were one of my closest and most cherished friends. After your falling out with P01, I had to distance myself from you."
+P08,TRUE,college,co-exist / working relationship,inner circle,a few times a week,0,2024,faded,"P01 (close, ended badly)
+P09 (close)
+P05 (close)
+P06 (friends)
+P12 (friends)
+P10 (friends)
+P11 (friends)
+P22 (acquaintances)
+P07 (close)
+P04 (friends)",,"When I felt isolated in the club, you became the reason I stayed, and I loved you for it. Then you used my weaknesses against me and belittled me, until you and P01 fell out over it. Now we keep a working relationship, and I'm still hurt."
+P09,TRUE,college,friendly,good friend,a few times a week,0,2024,steady,"P01 (friends, ended badly)
+P07 (close)
+P12 (friends)
+P05 (close)",,"We had a lot of tension, and I suspect you played a part in my falling out with P05. Since then, our relationship has improved a lot. You cut off P01 after his falling out with P08, which happened on my behalf."
+P10,TRUE,college,inner circle,inner circle,a few times a week,0,2023,steady,"P01 (acquaintances)
+P11 (close)
+P12 (close)
+P08 (friends)
+P22 (friends)
+P06 (friends)",,"We became best friends junior year in the club, and you always know how to lighten the mood. You miss every hint and frustrate me, then surprise me with the deepest conversations. I always forgive you, because underneath it all I know you care."
+P11,TRUE,college,inner circle,inner circle,a few times a week,0,2025,close,"P01 (acquaintances)
+P10 (close)
+P12 (close)
+P08 (friends)
+P05 (friends)
+P22 (friends)",fahh,"You're observant and caring; you notice the small things, and I see it. We don't see eye to eye on everything, but we do on what truly matters. I feel secure with you, and I can't wait for our next adventures."
+P12,TRUE,college,inner circle,inner circle,a few times a week,0,2025,close,"P01 (acquaintances)
+P10 (close)
+P11 (close)
+P08 (friends)
+P09 (friends)
+P05 (friends)",,"You've become an unexpected safe space, someone I can be vulnerable with, which has become rare for me. I admire how you choose to stay positive and look on the bright side; I want more of that in myself."
+P13,TRUE,college,good friend,inner circle,once in a while,0,2023,fading,"P14 (close)
+P15 (friends, fading)",,"We drifted, but never far. You're quiet and hard to read to most people, yet with you I never have to explain myself, and hours pass like minutes. Of my whole freshman-year group, I'm still closest to you."
+P14,TRUE,college,friendly,inner circle,once in a while,0,2023,fading,"P13 (close)
+P15 (close)
+P16 (friends)
+P17 (friends)",,"You, P13 and I were a close trio freshman year, and you always told me the truth and looked for the bright side. We don't always know what to say anymore, but I still admire how honestly you show up."
+P15,TRUE,college,co-exist / working relationship,inner circle,once in a while,0,,faded,"P13 (friends, fading)
+P14 (close)
+P16 (close)
+P17 (friends)",,"You were my best friend first. When life got busy, you let go and told me why, and those words stayed with me longer than you know. I still don't fully know what's under the spines."
+P16,TRUE,college,co-exist / working relationship,inner circle,not anymore,0,,ended badly,"P15 (close)
+P14 (friends)
+P17 (friends, fading)
+P18 (friends, faded)
+P19 (friends)",,"You were once my best friend, and now we don't even acknowledge each other. You spiraled and made it my fault, and maybe part of it was. I forgive you, I still care, and I wish you well."
+P17,TRUE,college,friendly,inner circle,once in a while,0,,fading,"P16 (friends, fading)
+P15 (acquaintances)
+P14 (acquaintances)
+P18 (friends, fading)
+P19 (friends)",,"Spontaneous, whimsical and unpredictable, you always make me smile. We're so different, but you were the breath of fresh air my routine needed. We rarely see each other now, but every time we do, I feel refreshed."
+P18,TRUE,college,friendly,inner circle,once in a while,0,,faded,"P16 (friends, faded)
+P17 (friends, faded)",,You were my closest friend; you showed up when no one else did. Then you disappeared without a trace.
+P19,FALSE,college,friendly,good friend,once in a while,0,,fading,"P16 (friends)
+P17 (friends)
+P20 (friends)",,"You were part of my very first introductions to school, and you're a good friend."
+P20,FALSE,college,good friend,close friend,once in a while,0,,fading,"P19 (friends)
+P22 (friends)
+P21 (friends, ended badly)",,You were the best roommate I've ever had. If only it had worked out.
+P21,FALSE,college,not on speaking terms,close friend,not anymore,,,ended badly,"P20 (friends, ended badly)",,"The moment we became friends, you turned on me and made the one place that should have been my refuge unbearable. You made all of the roommates move out."
+P22,TRUE,college,close friend,close friend,every week,0,,close,"P20 (friends)
+P10 (friends)
+P05 (friends)
+P23 (close)
+P01 (acquaintances)
+P08 (acquaintances)",yeahyeahyeahyeahyeahyeah,"You love rage-baiting me, but I appreciate you and your positivity so much. You're a total goofball."
+P23,FALSE,college,good friend,close friend,every week,0,,close,"P22 (close)
+P25 (acquaintances)
+P24 (acquaintances)
+P05 (acquaintances)",,"We became friends unexpectedly through P22, and I'm so happy we did."
+P24,FALSE,college,good friend,close friend,every week,0,2024,close,"P25 (acquaintances)
+P23 (acquaintances)
+P05 (acquaintances)",you can tell she's a princess!,Being on staff with you is one of the best things to come out of it. I admire your work ethic and how much you love your friends.
+P25,FALSE,college,close friend,inner circle,once in a while,0,2023,fading,"P01 (friends, faded)
+P04 (friends, faded)
+P24 (acquaintances)
+P23 (acquaintances)
+P05 (acquaintances)",,"A big brother, a mentor and a best friend. I don't see you much anymore, but whenever I hear tea, I know you'd love to hear it."
+P26,TRUE,college,inner circle,inner circle,every week,0,2024,close,,,"We became best friends in the most unexpected way, and now you're the person I tell everything. I can be fearlessly myself with you, and you always ground me and remind me to have fun. Love you, pooks."
+P27,TRUE,college,inner circle,inner circle,a few times a week,0,2023,close,P05 (friends),,"I have no idea how we became friends, but it's one of the best things that's happened to me. You just get me. Through the trauma bonding, long hours and rants, I know you'll be a lifelong friend, if you ever answer my texts."
+P28,TRUE,home,inner circle,inner circle,every month,1000,2006,close,P29 (close),,"Our dads have been best friends since childhood, so we grew up together, more like siblings than friends. Now that we're older, we find support in each other."
+P29,FALSE,home,close friend,inner circle,once in a while,100,2005,steady,"P28 (close)
+P30 (acquaintances)",,"Our dads have been best friends since childhood, so you're part of so much of my childhood, more like a sister than a friend. Now you're on to great things, and I'm so proud of you."
+P30,TRUE,home,inner circle,inner circle,every week,1000,2019,close,"P31 (close)
+P33 (close)
+P32 (close)
+P01 (acquaintances)
+P13 (acquaintances, faded)",,"We became close junior year in AP Bio, and you've been my best friend ever since; when I think of you, I think of home. You rage-bait like it's a sport, but you know when to comfort me, when to have fun and when to be serious. You've seen me through every stage of life."
+P31,TRUE,home,close friend,inner circle,once in a while,1000,2017,steady,"P30 (close)
+P33 (close)
+P32 (friends)
+P01 (acquaintances)",,"It started when I kept borrowing your highlighters in eighth-grade French. You're the P31 to my Zaza. Even when you feel far away, I know you're there, steady like the sun after it sets: never truly gone, just out of sight."
+P32,TRUE,home,inner circle,inner circle,once in a while,100,2007,close,"P30 (close)
+P33 (friends)
+P31 (friends)
+P01 (acquaintances)",,"We've known each other since we were three, and college was the first time we were apart. We've only grown closer since. I admire your work ethic, your kindness and how you show up for the people you love."
+P33,TRUE,home,inner circle,inner circle,every month,100,2015,close,"P30 (close)
+P31 (close)
+P32 (friends)
+P01 (acquaintances)",,"In middle and high school we bickered like a married couple, but neither of us ever left, because the love underneath was so deep. You know me inside and out and never make me feel small for my flaws. We don't see each other often, but our love is unwavering."
