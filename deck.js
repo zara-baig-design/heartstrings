@@ -1,5 +1,5 @@
 // The deck: every person's card in a row you can swipe (or arrow) through, closest friends first.
-import { personHTML } from './panel.js?v=1794562701';
+import { personHTML } from './panel.js?v=1794562833';
 
 const deck = document.getElementById('deck');
 const track = deck.querySelector('.deck-track');

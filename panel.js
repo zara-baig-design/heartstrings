@@ -1,7 +1,7 @@
 // The info card that opens when you click a person or a string.
-import { CONFIG } from './config.js?v=1794562701';
-import { ME, esc, CLOSENESS_WORDS, RING_NAMES, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794562701';
-import { symbolFile } from './lib.js?v=1794562701';
+import { CONFIG } from './config.js?v=1794562833';
+import { ME, esc, CLOSENESS_WORDS, RING_NAMES, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794562833';
+import { symbolFile } from './lib.js?v=1794562833';
 
 const panel = document.getElementById('panel');
 const body = document.getElementById('panel-body');
@@ -151,11 +151,10 @@ function linkCard(l) {
   open(`
     <div class="card-wash" style="--c:${ca};--c2:${cb}" aria-hidden="true"></div>
     <div class="pair-row${fade ? ' pale' : ''}">
-      ${stamp(l.a, ca)}
+      <button class="pair-person" data-person="${esc(l.a.id)}" aria-label="Open their card">${stamp(l.a, ca)}</button>
       <div class="pair-link s${l.strength}${l.cut ? ' cut' : ''}" style="--c:${blendHex(ca, cb)}" role="img" aria-label="${word}"><i></i><span>${word}</span></div>
-      ${stamp(l.b, cb)}
+      <button class="pair-person" data-person="${esc(l.b.id)}" aria-label="Open their card">${stamp(l.b, cb)}</button>
     </div>
-    <div class="card-foot"><div class="ties">${tie(l.a)}${tie(l.b)}</div></div>
   `, l);
 }
 

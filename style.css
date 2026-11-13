@@ -698,3 +698,5 @@ body.deck-open #top, body.deck-open #dock, body.deck-open #panel, body.deck-open
 
 /* friend icons sit dead center in their circles (an older rule padded them off to one side) */
 .ties button.tie:has(.sym) { padding: 0; }
+.pair-person { padding: 0; border: none; background: none; cursor: pointer; }   /* tap either stamp to open that person's card */
+.pair-row { margin-bottom: 8px; }

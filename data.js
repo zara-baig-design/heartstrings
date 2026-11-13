@@ -1,7 +1,7 @@
 // Reads the spreadsheet CSVs and turns them into people (nodes) and strings (links).
 // Nothing in here draws anything.
 import { Color } from 'three';
-import { CONFIG } from './config.js?v=1794562701';
+import { CONFIG } from './config.js?v=1794562833';
 
 export const ME = CONFIG.centerName;
 // close = strong bond (however often you talk) · steady = chill, nothing changing ·
