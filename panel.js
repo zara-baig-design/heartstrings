@@ -1,7 +1,7 @@
 // The info card that opens when you click a person or a string.
-import { CONFIG } from './config.js?v=1794562833';
-import { ME, esc, CLOSENESS_WORDS, RING_NAMES, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794562833';
-import { symbolFile } from './lib.js?v=1794562833';
+import { CONFIG } from './config.js?v=1794564273';
+import { ME, esc, CLOSENESS_WORDS, RING_NAMES, FREQ_WORDS, STRENGTH_NAMES } from './data.js?v=1794564273';
+import { symbolFile } from './lib.js?v=1794564273';
 
 const panel = document.getElementById('panel');
 const body = document.getElementById('panel-body');

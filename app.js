@@ -2,14 +2,14 @@
 // data.js reads the spreadsheet, this file draws it, panel.js is the pop-up card.
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
-import { CONFIG } from './config.js?v=1794562833';
-import { loadGraph, stringColor, esc, MODES, STATUSES, SPREAD, STATUS_FADE } from './data.js?v=1794562833';
-import { LOOK, applyPageColors } from './look.js?v=1794562833';
-import { initTuner } from './tune.js?v=1794562833';
-import { symbolFile, loadSymbol, fontsReady, textSprite, fitLabels } from './lib.js?v=1794562833';
-import { initPanel, showPerson, showFriendLink, showMe, hidePanel } from './panel.js?v=1794562833';
-import { initDeck } from './deck.js?v=1794562833';
-import { initFront, showFront } from './front.js?v=1794562833';
+import { CONFIG } from './config.js?v=1794564273';
+import { loadGraph, stringColor, esc, MODES, STATUSES, SPREAD, STATUS_FADE } from './data.js?v=1794564273';
+import { LOOK, applyPageColors } from './look.js?v=1794564273';
+import { initTuner } from './tune.js?v=1794564273';
+import { symbolFile, loadSymbol, fontsReady, textSprite, fitLabels } from './lib.js?v=1794564273';
+import { initPanel, showPerson, showFriendLink, showMe, hidePanel } from './panel.js?v=1794564273';
+import { initDeck } from './deck.js?v=1794564273';
+import { initFront, showFront } from './front.js?v=1794564273';
 
 const state = {
   mode: 'closeness',
@@ -33,7 +33,7 @@ const phone = () => innerWidth <= 700;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.05;
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(devicePixelRatio, touch ? 1.5 : 2));   // phones: sharp enough, and much lighter to draw
 el.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
@@ -50,7 +50,7 @@ controls.addEventListener('change', () => { dirty = true; });
 // one side and just above, like a visitor looking in.
 const HOME = new THREE.Vector3(0, 30, 0);
 const ROOM_DIR = new THREE.Vector3(0.25, 0.12, 1).normalize();
-const back = Math.min(1.5, Math.max(1, 1.25 * el.clientHeight / el.clientWidth));
+const back = Math.min(1.15, Math.max(1, 1.25 * el.clientHeight / el.clientWidth));   // on phones, close enough that people fill the width
 controls.target.copy(HOME);
 camera.position.copy(HOME).addScaledVector(ROOM_DIR, 820 * SPREAD * back);
 const HOME_DISTANCE = camera.position.distanceTo(HOME);
@@ -192,14 +192,14 @@ function symbolTexture(file, ink) {
 // Orb tint and symbol follow the palette, so they're redone whenever the colors change.
 function makeCoinMaps(n) {
   const file = symbolFile(n.name);
-  n.symbol.material.map?.dispose();
+  if (!n.symbol.material.map?.userData.shared) n.symbol.material.map?.dispose();
   n.symbol.material.map = LOOK.etch.toLowerCase() !== '#ffffff' ? etchTexture(file, etchColor(n), n.isMe && LOOK.etch.toLowerCase() !== '#ffffff') : symbolTexture(file, n.isMe ? ME_INK : LOOK.ink);   // white page: the same frosted etch as the discs
   n.symbol.material.needsUpdate = true;
   n.symbol.visible = !!file;
   n.tint = new THREE.Color(n.isMe ? LOOK.sun : LOOK[n.group] ?? LOOK.other);
   if (n.disc) {
     const { etch } = n.disc.userData;
-    etch.material.map?.dispose();
+    if (!etch.material.map?.userData.shared) etch.material.map?.dispose();
     etch.material.map = etchTexture(file, etchColor(n), n.isMe && LOOK.etch.toLowerCase() !== '#ffffff');   // etched: bright white with a soft shadow and glow
     etch.visible = !!file;
     paintDisc(n);
@@ -284,10 +284,16 @@ function foilEtch(c, img, pad, box, tex) {
   dirty = true;
 }
 
+// Each symbol is drawn once per color and shared, since the frosting is slow to make (on phones especially).
+const etchCache = new Map();
 function etchTexture(file, color = LOOK.etch, foil = false) {
-  const S = LOOK.etch.toLowerCase() === '#ffffff' ? 320 : 512, canvas = document.createElement('canvas');   // more pixels for the frosted grain
+  const key = `${file}|${color}|${foil}|${LOOK.etch}`;
+  if (etchCache.has(key)) return etchCache.get(key);
+  const S = LOOK.etch.toLowerCase() === '#ffffff' ? 320 : touch ? 256 : 512, canvas = document.createElement('canvas');   // more pixels for the frosted grain (fewer on phones)
   canvas.width = canvas.height = S;
   const tex = new THREE.CanvasTexture(canvas);
+  tex.userData.shared = true;
+  etchCache.set(key, tex);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = 4;
   const white = LOOK.etch.toLowerCase() === '#ffffff';
@@ -1591,7 +1597,7 @@ async function start() {
     makeRings();
     makeStars();
     let plan = null;
-    try { plan = await fetch('data/install-plan.json?v=1794562833').then(r => (r.ok ? r.json() : null)); } catch {}
+    try { plan = await fetch('data/install-plan.json?v=1794564273').then(r => (r.ok ? r.json() : null)); } catch {}
     setupRoom(plan);
     if (!ceiling) document.querySelector('[data-mode="room"]').hidden = true;   // no installation plan yet
     initPanel(data, explore);

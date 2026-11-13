@@ -700,3 +700,17 @@ body.deck-open #top, body.deck-open #dock, body.deck-open #panel, body.deck-open
 .ties button.tie:has(.sym) { padding: 0; }
 .pair-person { padding: 0; border: none; background: none; cursor: pointer; }   /* tap either stamp to open that person's card */
 .pair-row { margin-bottom: 8px; }
+
+/* home page: a quiet hint that the page is the way in */
+.front-cta { margin: 22px 0 0; font: 400 9px/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; color: var(--muted); animation: cta 2.8s ease-in-out infinite; }
+.front-cta .on-mouse { display: none; }
+@media (hover: hover) and (pointer: fine) { .front-cta .on-touch { display: none; } .front-cta .on-mouse { display: inline; } }
+@keyframes cta { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .front-cta { animation: none; } }
+
+/* phones: a close button on the cards, since tapping the sky to close isn't obvious there */
+@media (max-width: 700px), (pointer: coarse) {
+  #panel > .close, #deck > .close { display: grid !important; place-items: center; width: 40px; height: 40px; padding: 0; font: 300 24px/1 var(--mono); color: var(--ink); z-index: 3; }
+  #panel > .close { top: 6px; right: 6px; position: absolute; }
+  #deck > .close { top: calc(10px + env(safe-area-inset-top)); right: 12px; position: absolute; }
+}

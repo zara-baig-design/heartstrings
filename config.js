@@ -5,8 +5,8 @@ export const CONFIG = {
   // Where the data comes from. To read straight from Google Sheets:
   // File → Share → Publish to web → pick the "People" tab → CSV → copy the link
   // and paste it here (then do the same for "Links").
-  peopleCsv: 'data/people.csv?v=1794562833',
-  linksCsv: 'data/links.csv?v=1794562833',
+  peopleCsv: 'data/people.csv?v=1794564273',
+  linksCsv: 'data/links.csv?v=1794564273',
 
   // Folder that artifact_image filenames are looked up in.
   artifactsPath: 'artifacts/',
