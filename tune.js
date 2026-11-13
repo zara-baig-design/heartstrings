@@ -1,7 +1,7 @@
 // The tuner: sliders for everything in look.js. Hidden for visitors.
 // Open it with the T key, or by adding ?tune to the address.
 import GUI from './vendor/lil-gui.esm.min.js';
-import { LOOK, TEXTURES, PALETTES, LAYOUTS, saveLook, resetLook } from './look.js?v=1794564470';
+import { LOOK, TEXTURES, PALETTES, LAYOUTS, saveLook, resetLook } from './look.js?v=1794564529';
 
 export function initTuner(onChange) {
   const gui = new GUI({ title: 'Tune' });

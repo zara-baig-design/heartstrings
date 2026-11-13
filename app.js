@@ -2,14 +2,14 @@
 // data.js reads the spreadsheet, this file draws it, panel.js is the pop-up card.
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
-import { CONFIG } from './config.js?v=1794564470';
-import { loadGraph, stringColor, esc, MODES, STATUSES, SPREAD, STATUS_FADE } from './data.js?v=1794564470';
-import { LOOK, applyPageColors } from './look.js?v=1794564470';
-import { initTuner } from './tune.js?v=1794564470';
-import { symbolFile, loadSymbol, fontsReady, textSprite, fitLabels } from './lib.js?v=1794564470';
-import { initPanel, showPerson, showFriendLink, showMe, hidePanel } from './panel.js?v=1794564470';
-import { initDeck } from './deck.js?v=1794564470';
-import { initFront, showFront } from './front.js?v=1794564470';
+import { CONFIG } from './config.js?v=1794564529';
+import { loadGraph, stringColor, esc, MODES, STATUSES, SPREAD, STATUS_FADE } from './data.js?v=1794564529';
+import { LOOK, applyPageColors } from './look.js?v=1794564529';
+import { initTuner } from './tune.js?v=1794564529';
+import { symbolFile, loadSymbol, fontsReady, textSprite, fitLabels } from './lib.js?v=1794564529';
+import { initPanel, showPerson, showFriendLink, showMe, hidePanel } from './panel.js?v=1794564529';
+import { initDeck } from './deck.js?v=1794564529';
+import { initFront, showFront } from './front.js?v=1794564529';
 
 const state = {
   mode: 'closeness',
@@ -1597,7 +1597,7 @@ async function start() {
     makeRings();
     makeStars();
     let plan = null;
-    try { plan = await fetch('data/install-plan.json?v=1794564470').then(r => (r.ok ? r.json() : null)); } catch {}
+    try { plan = await fetch('data/install-plan.json?v=1794564529').then(r => (r.ok ? r.json() : null)); } catch {}
     setupRoom(plan);
     if (!ceiling) document.querySelector('[data-mode="room"]').hidden = true;   // no installation plan yet
     initPanel(data, explore);

@@ -1,6 +1,6 @@
 // Small drawing helpers shared by the network page (app.js) and the installation render (install.js).
 import * as THREE from 'three';
-import { CONFIG } from './config.js?v=1794564470';
+import { CONFIG } from './config.js?v=1794564529';
 
 // ---------- symbols ----------
 
